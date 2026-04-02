@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LRU OTT Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🎬 LRU OTT Platform</h1>
+
+<div class="controls">
+  <label>Cache Size:</label>
+  <input type="number" id="capacity" value="3" min="1" max="6" onchange="changeCapacity()">
+</div>
+
+<div class="top-bar">
+
+  <div>
+    <h3>📺 Now Watching</h3>
+    <p id="current">None</p>
+  </div>
+
+  <div>
+    <h3>🧠 LRU Cache (Old → New)</h3>
+    <div id="memory"></div>
+  </div>
+
+  <div>
+    <h3>❌ Removed</h3>
+    <p id="removed" class="removed-box">None</p>
+  </div>
+
+</div>
+
+<h2>🔥 Trending Now</h2>
+
+<div class="grid">
+  <div class="card" onclick="watch('Avengers')"><img src="https://picsum.photos/200/300?1"><p>Avengers</p></div>
+  <div class="card" onclick="watch('Inception')"><img src="https://picsum.photos/200/300?2"><p>Inception</p></div>
+  <div class="card" onclick="watch('Interstellar')"><img src="https://picsum.photos/200/300?3"><p>Interstellar</p></div>
+  <div class="card" onclick="watch('Joker')"><img src="https://picsum.photos/200/300?4"><p>Joker</p></div>
+  <div class="card" onclick="watch('Batman')"><img src="https://picsum.photos/200/300?5"><p>Batman</p></div>
+  <div class="card" onclick="watch('Matrix')"><img src="https://picsum.photos/200/300?6"><p>Matrix</p></div>
+</div>
+
+<audio id="clickSound" src="click.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
